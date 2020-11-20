@@ -1,0 +1,9 @@
+.bg-black {
+    background-color: #000;
+}
+
+#navlinks ul li{
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
