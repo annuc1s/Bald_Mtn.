@@ -31,8 +31,8 @@
   </head>
 
   <body>
-    <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-black pt-lg-2 pb-lg-2 d-lg-flex">
+    <header class="container-fluid fixed-top bg-black">
+        <div id="topnav" class="row  pt-lg-2 pb-lg-2 d-lg-flex">
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-white my-0"><strong>Bald Mtn.</strong></h2>
@@ -54,10 +54,10 @@
                 </ul>
             </div>
 
-            <div id="accountlinks" class="navlinks col-12 col-lg-4 my-auto py-1 pt-lg-3 py-lg-0 text-center text-lg-right">
+            <div id="accountlinks" class="navlinks col-12 col-lg-4 my-auto pt-lg-3 py-lg-0 text-center text-lg-right">
                 <ul class="w-auto list-unstyled">
                     <li>
-                        <span class="text-white mr-5 icon"><i class="fas fa-search"></i></span>
+                        <button onclick="searchToggle()" class="text-white mr-5 icon btn btn-link"><i class="fas fa-search"></i></button>     
                     </li>
                     <li>
                         <a href="#" class="text-white mr-5">My Account</a>
@@ -67,8 +67,20 @@
                     </li>
                 </ul>
             </div>
+            
         </div>
-
+        <form id="search-bar" class="pb-lg-4 py-1" method="GET" action="">
+            <div class="input-group">
+                <input type="text" class="form-control rounded-0" name="q" placeholder="Search">
+                <div class="input-group-append">
+                    <button class="form-control btn btn-link text-white rounded-0" type="submit">
+                    <span class="icon white-text">
+                        <i class="fas fa-search"></i>
+                    </span>
+                    </button>
+                </div>
+            </div>
+        </form>
 
     </header>
 
@@ -81,5 +93,16 @@
     {% block postloadjs %}
     {% endblock %}
 
-  </body>
+    <script>
+        function searchToggle() {
+            var x = document.getElementById("search-bar");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            }
+    </script>
+
+    </body>
 </html>

@@ -23,3 +23,12 @@
 #accountlinks{
     padding-right: 2.5rem;
 }
+
+#search-bar{
+    padding: 0 1rem;
+}
+
+#search-bar .btn{
+    background-color: rgba(196, 215, 245, 0.2);
+    padding: 0 3rem;
+}
