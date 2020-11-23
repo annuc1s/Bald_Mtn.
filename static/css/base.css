@@ -2,8 +2,24 @@
     background-color: #000;
 }
 
-#navlinks ul li{
+.navlinks ul li{
     display: inline;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+}
+
+.shopping-cart-icon{
+    font-size: 25px;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+#navlinks{
+    padding-top: 1.5rem;
+}
+
+#accountlinks{
+    padding-right: 2.5rem;
 }
