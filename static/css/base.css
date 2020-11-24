@@ -52,3 +52,25 @@
 #footer-nav{
     font-size: 1rem;
 }
+
+
+body{
+    background: url('/media/hero-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.display-4{
+    font-weight:500;
+    color: rgb(33, 40, 49);
+    text-shadow: 2px 2px 3px rgb(196, 215, 245);
+}
+
+.shop-now-btn{
+    background-color: rgba(196, 215, 245, 0.4);
+    border: rgb(196, 215, 245);
+}
+
+.shop-now-btn:hover{
+    background-color: rgba(196, 215, 245, 0.8);
+}
