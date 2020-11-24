@@ -1,3 +1,11 @@
+/*----------------sets default margins and padding for all page content to */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 /* css for base.html header and footer */
 .bg-black {
     background-color: #000;
@@ -53,14 +61,19 @@
     font-size: 1rem;
 }
 
-
-body{
-    background: url('/media/hero-image.jpg') no-repeat center center fixed;
+/* css for home/index.html */
+#hero-image{
+    background: url('/media/hero-image.jpg') no-repeat center;
     background-size: cover;
     height: 100vh;
 }
 
-.display-4{
+.text-right{
+    margin: 0;
+}
+
+.display-4,
+.section-heading{
     font-weight:500;
     color: rgb(33, 40, 49);
     text-shadow: 2px 2px 3px rgb(196, 215, 245);
@@ -73,4 +86,9 @@ body{
 
 .shop-now-btn:hover{
     background-color: rgba(196, 215, 245, 0.8);
+}
+
+.section-heading{
+    text-transform: uppercase;
+    font-weight: 600;
 }
