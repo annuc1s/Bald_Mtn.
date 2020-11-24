@@ -32,7 +32,7 @@
 
   <body>
     <header class="container-fluid fixed-top bg-black">
-        <div id="topnav" class="row  pt-lg-2 pb-lg-2 d-lg-flex">
+        <div id="topnav" class="row pt-lg-2 pb-lg-2 d-lg-flex">
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-white my-0"><strong>Bald Mtn.</strong></h2>
@@ -57,13 +57,13 @@
             <div id="accountlinks" class="navlinks col-12 col-lg-4 my-auto pt-lg-3 py-lg-0 text-center text-lg-right">
                 <ul class="w-auto list-unstyled">
                     <li>
-                        <button onclick="searchToggle()" class="text-white mr-5 icon btn btn-link"><i class="fas fa-search"></i></button>     
+                        <button onclick="searchToggle()" class="text-white mr-5 form-icon btn btn-link"><i class="fas fa-search"></i></button>     
                     </li>
                     <li>
                         <a href="#" class="text-white mr-5">My Account</a>
                     </li>
                     <li>
-                        <a href="#" class="text-white shopping-cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="text-white icon"><i class="fas fa-shopping-cart"></i></a>
                     </li>
                 </ul>
             </div>
@@ -74,25 +74,22 @@
                 <input type="text" class="form-control rounded-0" name="q" placeholder="Search">
                 <div class="input-group-append">
                     <button class="form-control btn btn-link text-white rounded-0" type="submit">
-                    <span class="icon white-text">
+                    <span class="form-icon white-text">
                         <i class="fas fa-search"></i>
                     </span>
                     </button>
                 </div>
             </div>
         </form>
-
     </header>
 
     {% block page_header %}
     {% endblock %}
-
+        <div class="main-content"></div>
     {% block content %}
     {% endblock %}
 
     {% block postloadjs %}
-    {% endblock %}
-
     <script>
         function searchToggle() {
             var x = document.getElementById("search-bar");
@@ -103,6 +100,70 @@
             }
             }
     </script>
+    {% endblock %}
+
+    <footer class="page-footer container-fluid bg-black">
+        <div id="newsletter" class="pt-3 pb-lg-2">
+            <h4 class="text-white text-center">Sign up to our newsletter for the latest products and offers.</h4>
+            <form id="newsletter-form" class="pt-lg-2 pb-lg-4 py-1" method="POST" action="">
+                <div class="input-group">
+                    <input type="text" class="form-control rounded-0" name="q" placeholder="Email Address">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-link text-white rounded-0" type="submit">
+                        <span class="white-text">
+                            <h5>SUBMIT</h5>
+                        </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="footer-contact" class="row pb-lg-4 ml-2 ml-2">
+        <div class="col-12 col-lg-2"></div>
+            <div class="col-12 col-lg-3 text-white">
+				<b>Address:</b><br> 
+                <span class="pl-5">John Street 5,</span><br>
+                <span class="pl-5">Sligo, Co.Sligo</span><br> 
+                <span class="pl-5"> Ireland</span><br>
+                <b>Phone:</b> +353711234567 <br>
+				<b>Email:</b> lunch@munch.ie <br>	
+			</div>
+        
+            <div id="footer-nav" class="navlinks col-12 col-lg-5 my-auto py-1 pt-lg-4 py-lg-0 text-center text-lg-right">
+                <ul class="w-auto list-unstyled">
+                    <li>
+                        <a href="#" class="text-white mr-3">Shop</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white mr-3">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white mr-3">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white">My account</a>
+                    </li>     
+                </ul>
+                <div class="social-icons text-right">
+                    <ul class="w-auto list-unstyled pr-4 mr-5">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="text-white icon mr-4"><i class="fab fa-facebook"></i></a>    
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" class="text-white icon mr-4"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/" target="_blank" class="text-white icon mr-4"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" class="text-white icon"><i class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+                </div>
+            </div> 
+            <div class="col-12 col-lg-2"></div>
+        </div>
+    </footer>
 
     </body>
 </html>

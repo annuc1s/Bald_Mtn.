@@ -1,3 +1,4 @@
+/* css for base.html header and footer */
 .bg-black {
     background-color: #000;
 }
@@ -8,11 +9,11 @@
     letter-spacing: 1.5px;
 }
 
-.shopping-cart-icon{
+.icon{
     font-size: 25px;
 }
 
-.icon {
+.form-icon {
     font-size: 20px;
 }
 
@@ -26,9 +27,28 @@
 
 #search-bar{
     padding: 0 1rem;
+    display: none;
 }
 
-#search-bar .btn{
+#newsletter-form{
+    padding: 0 1rem;
+}
+
+#search-bar .btn,
+#newsletter-form .btn{
     background-color: rgba(196, 215, 245, 0.2);
     padding: 0 3rem;
+    text-decoration: none;
+}
+
+.form-control{
+    border: 1px solid #000;
+}
+
+#footer-contact{
+    margin-left: 3rem;
+}
+
+#footer-nav{
+    font-size: 1rem;
 }
