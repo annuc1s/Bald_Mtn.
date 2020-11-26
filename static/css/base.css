@@ -92,3 +92,16 @@
     text-transform: uppercase;
     font-weight: 600;
 }
+
+/* css for home/index.html */
+#about h1{
+    padding-top: 2rem;
+}
+
+#about p{
+    text-align: justify;
+    padding-top: 1rem;
+    color:rgb(33, 40, 49);
+    font-family: Helvetica;
+    font-size: 1rem;
+}
