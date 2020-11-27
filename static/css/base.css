@@ -94,7 +94,8 @@
 }
 
 /* css for about/about.html */
-#about h1{
+#about h1,
+#contact h1 {
     padding-top: 2rem;
 }
 
@@ -104,4 +105,8 @@
     color:rgb(33, 40, 49);
     font-family: Helvetica;
     font-size: 1rem;
+}
+
+#google-location{
+    height: 200px;
 }
