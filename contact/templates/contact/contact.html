@@ -4,19 +4,20 @@
 {% block content %}
 <div id="contact" class="mt-5 pt-5">
         <h1 class="section-heading text-center">Find Us</h1>
-            <div class="row ml-5 mr-5">
-                <div id="google-location" class="col-lg-6 col-md-6 col-sm-12 border rounded-0 mt-3"></div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                
+            <div class="row ml-5 mr-5 mt-3">
+                <div id="google-location" class="col-lg-6 col-md-6 col-sm-6 col-xs-12 border rounded-0"></div>
+                <div class="col-lg-2 col-md-2 col-sm-1"></div>
+                <div id="contact-address" class="col-lg-4 col-md-4 col-sm-5 col-xs-12 pt-3">
+				    <b>Address:</b><br> 
+                    <span class="pl-5">Oconell Street 5,</span><br>
+                    <span class="pl-5">Sligo, Co.Sligo</span><br> 
+                    <span class="pl-5"> Ireland</span><br>
+                    <b>Phone:</b> +353711234567 <br>
+                    <b>Email:</b> info@baldmtn.ie <br>	
                 </div>
             </div>
         <h1 class="section-heading text-center">Get in touch</h1>
     </div>
-
-    <!--Load the API from the specified URL with custom APIKEY-->
-	<script defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVtVUKreFqu4NdtKT_ExJHoPTyC9YaZKk&callback=initMap">
-	</script>
 
 {% block postloadjs %}
     <script src="{% static 'contact/js/google-maps.js' %}"></script>
