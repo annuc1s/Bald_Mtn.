@@ -79,12 +79,14 @@
     text-shadow: 2px 2px 3px rgb(196, 215, 245);
 }
 
-.shop-now-btn{
+.shop-now-btn,
+.form-submit {
     background-color: rgba(196, 215, 245, 0.4);
     border: rgb(196, 215, 245);
 }
 
-.shop-now-btn:hover{
+.shop-now-btn:hover,
+.form-submit:hover {
     background-color: rgba(196, 215, 245, 0.8);
 }
 
@@ -109,4 +111,13 @@
 
 #google-location{
     height: 200px;
+}
+
+form{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+#lname{
+    padding-top: 1rem;
 }
