@@ -109,6 +109,7 @@
     font-size: 1rem;
 }
 
+/* css for contact/contact.html */
 #google-location{
     height: 200px;
 }
@@ -117,3 +118,5 @@ form{
     margin-left: 3rem;
     margin-right: 3rem;
 }
+
+/* css for shop/shop.html */
