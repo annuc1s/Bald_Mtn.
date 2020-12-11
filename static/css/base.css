@@ -120,3 +120,13 @@ form{
 }
 
 /* css for shop/shop.html */
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
