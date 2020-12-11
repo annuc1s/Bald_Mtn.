@@ -97,7 +97,8 @@
 
 /* css for about/about.html */
 #about h1,
-#contact h1 {
+#contact h1,
+#shop h1 {
     padding-top: 2rem;
 }
 
@@ -122,6 +123,7 @@ form{
 /* css for shop/shop.html */
 
 .overlay{
+    
     height: 100%;
     width: 100%;
     top: 0;
