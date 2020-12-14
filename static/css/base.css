@@ -98,7 +98,8 @@
 /* css for about/about.html */
 #about h1,
 #contact h1,
-#shop h1 {
+#shop h1,
+#product_detail h1 {
     padding-top: 2rem;
 }
 
