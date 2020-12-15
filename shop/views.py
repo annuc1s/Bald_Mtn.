@@ -9,6 +9,8 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
+    sort = None
+    direction = None
 
     """ Search query will return results if matched with
     name and/or description by using Django db model Q """
@@ -22,9 +24,12 @@ def all_products(request):
         queries = Q(name__icontains=query) | Q(description__icontains=query)
         products = products.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'products': products,
         'search_term': query,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'shop/shop.html', context)
