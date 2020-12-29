@@ -35,7 +35,12 @@
 
   <body>
     <header class="container-fluid fixed-top bg-black">
-        <div id="topnav" class="row pt-lg-2 pb-lg-2 d-lg-flex">
+        <div id="delivery-banner" class="row text-center">
+            <div class="col text-black text-uppercase">
+                <h5 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}</h5>                
+            </div>            
+        </div>
+        <div id="topnav" class="row pb-lg-2 d-lg-flex">
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-white my-0"><strong>Bald Mtn.</strong></h2>
