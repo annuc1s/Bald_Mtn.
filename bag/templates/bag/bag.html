@@ -2,7 +2,25 @@
 {% load static %}
 
 {% block content %}
-<div id="shop" class="col text-center mt-5 pt-5">
-    <h1 class="section-heading text-center">Shopping bag</h1>
-</div>
+    <div class="container mb-4">
+        <div id="shopping-bag" class="col text-center mt-5 pt-5">
+            <h1 class="section-heading text-center">Shopping Bag</h1>
+        </div>
+        <div class="row pt-3">
+            <div class="col">
+                {% if bag_items %}
+                    <div class="table-responsive"></div>
+                {% else %}
+                    <p class="lead mb-2">Your bag is empty.</p>
+                    <a href="{% url 'shop' %}" class="back-to-shop border btn btn-lg rounded-0 text-uppercase py-3">
+                        <span class="form-icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span> Keep Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
 {% endblock%}

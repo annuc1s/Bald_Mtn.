@@ -80,13 +80,15 @@
 }
 
 .shop-now-btn,
-.form-submit {
+.form-submit,
+.back-to-shop {
     background-color: rgba(196, 215, 245, 0.4);
     border: rgb(196, 215, 245);
 }
 
 .shop-now-btn:hover,
-.form-submit:hover {
+.form-submit:hover,
+.back-to-shop:hover {
     background-color: rgba(196, 215, 245, 0.8);
 }
 
@@ -99,7 +101,8 @@
 #about h1,
 #contact h1,
 #shop h1,
-#product_detail h1 {
+#product_detail h1,
+#shopping-bag h1{
     padding-top: 2rem;
 }
 
