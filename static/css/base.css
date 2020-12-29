@@ -86,14 +86,16 @@
 
 .shop-now-btn,
 .form-submit,
-.back-to-shop {
+.back-to-shop,
+.add-to-bag {
     background-color: rgba(196, 215, 245, 0.4);
     border: rgb(196, 215, 245);
 }
 
 .shop-now-btn:hover,
 .form-submit:hover,
-.back-to-shop:hover {
+.back-to-shop:hover,
+.add-to-bag:hover {
     background-color: rgba(196, 215, 245, 0.8);
 }
 
@@ -141,3 +143,5 @@ form{
     background: white;
     z-index: -1;
 }
+
+/* css for shop/product-detail.html */
