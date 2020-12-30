@@ -115,3 +115,8 @@
     </div>
 
 {% endblock%}
+
+{% block postloadjs %}
+{{ block.super }}
+    {% include 'bag/includes/quantity-script.html' %}
+{% endblock %}
