@@ -18,6 +18,7 @@
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
 
@@ -61,9 +62,15 @@
                                                 </div>
                                             </div>
                                         </form>
+                                        
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€ {{ item.product.price }}</p>
+                                    </td>
+                                    <td class="w-5 update-remove">
+                                        <a class="update-link text-info">Update</a>
+                                        <a class="remove-item text-danger" id="remove_{{ item.item_id }}" 
+                                            data-size="{{ item.size }}">Remove</a>
                                     </td>
                                 </tr>
                             {% endfor %}

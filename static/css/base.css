@@ -147,3 +147,7 @@ form{
 }
 
 /* css for shop/product-detail.html */
+
+.update-remove{
+    display: grid;
+}
