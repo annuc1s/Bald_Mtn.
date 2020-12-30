@@ -87,7 +87,8 @@
 .shop-now-btn,
 .form-submit,
 .back-to-shop,
-.add-to-bag {
+.add-to-bag,
+.secure-checkout {
     background-color: rgba(196, 215, 245, 0.4);
     border: rgb(196, 215, 245);
 }
@@ -95,7 +96,8 @@
 .shop-now-btn:hover,
 .form-submit:hover,
 .back-to-shop:hover,
-.add-to-bag:hover {
+.add-to-bag:hover,
+.secure-checkout:hover {
     background-color: rgba(196, 215, 245, 0.8);
 }
 
