@@ -9,7 +9,9 @@
         <div class="row pt-3">
             <div class="col">
                 {% if bag_items %}
-                    <div class="table-responsive"></div>
+                    <div class="table-responsive">
+                        {{ bag_items }}
+                    </div>
                 {% else %}
                     <p class="lead mb-2">Your bag is empty.</p>
                     <a href="{% url 'shop' %}" class="back-to-shop border btn btn-lg rounded-0 text-uppercase py-3">
