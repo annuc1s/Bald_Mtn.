@@ -36,6 +36,7 @@ def add_to_bag(request, item_id):
 def adjust_bag(request, item_id):
     """ A view that allows users to update quantity of products before checkout """
 
+    product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
     if 'product_size' in request.POST:
@@ -54,6 +55,7 @@ def adjust_bag(request, item_id):
             bag[item_id] = quantity
         else:
             bag.pop(item_id)
+            messages.success(request, f'Updated quantity of {product.name}!')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -61,6 +63,8 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
+
+    product = Product.objects.get(pk=item_id)
 
     try:
         size = None
@@ -74,6 +78,7 @@ def remove_from_bag(request, item_id):
                 bag.pop(item_id)
         else:
             bag.pop(item_id)
+            messages.success(request, f'Removed {product.name} from bag!')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
