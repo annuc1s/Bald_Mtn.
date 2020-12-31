@@ -190,7 +190,8 @@
 #product_detail h1,
 #shopping-bag h1,
 #checkout h1,
-#myprofile h1{
+#myprofile h1,
+#login h1{
     padding-top: 2rem;
 }
 
