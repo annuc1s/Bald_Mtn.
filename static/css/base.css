@@ -66,6 +66,22 @@
     font-size: 1rem;
 }
 
+/* bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+.toast-capper {
+    height: 2px;
+}
+
 /* css for home/index.html */
 #hero-image{
     background: url('/media/hero-image.jpg') no-repeat center;
