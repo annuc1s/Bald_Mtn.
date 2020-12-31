@@ -82,6 +82,12 @@
     height: 2px;
 }
 
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
@@ -128,7 +134,7 @@
 }
 
 .bag-notification-wrapper {
-    height: 100px;
+    height: 10rem;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -155,7 +161,8 @@
 .form-submit,
 .back-to-shop,
 .add-to-bag,
-.secure-checkout {
+.secure-checkout,
+.preview-btn {
     background-color: rgba(196, 215, 245, 0.4);
     border: rgb(196, 215, 245);
 }
@@ -164,7 +171,8 @@
 .form-submit:hover,
 .back-to-shop:hover,
 .add-to-bag:hover,
-.secure-checkout:hover {
+.secure-checkout:hover,
+.preview-btn:hover {
     background-color: rgba(196, 215, 245, 0.8);
 }
 
