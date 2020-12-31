@@ -70,7 +70,21 @@
                         <button onclick="searchToggle()" class="text-white mr-5 form-icon btn btn-link"><i class="fas fa-search"></i></button>     
                     </li>
                     <li>
-                        <a href="#" class="text-white mr-5">My Account</a>
+                        <a href="#" class="text-white mr-5" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
                     </li>
                     <li>
                         <a href="{% url 'view_bag' %}" class="text-white form-icon">
