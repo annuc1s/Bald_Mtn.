@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div id="checkout" class="col text-center mt-5 pt-5">
+            <h1 class="section-heading text-center">Checkout</h1>
+        </div>
+
+        <div class="row pt-3">
+            <div class="col-12 col-lg-6">
+                <h5 class="text-muted">Please fill out the form below to complete your order</h5>
+            </div>
+        </div>
+    </div>
+
+{% endblock%}

@@ -186,7 +186,8 @@
 #contact h1,
 #shop h1,
 #product_detail h1,
-#shopping-bag h1{
+#shopping-bag h1,
+#checkout h1{
     padding-top: 2rem;
 }
 
