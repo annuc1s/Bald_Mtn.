@@ -162,7 +162,8 @@
 .back-to-shop,
 .add-to-bag,
 .secure-checkout,
-.preview-btn {
+.preview-btn,
+#submit-button {
     background-color: rgba(196, 215, 245, 0.4);
     border: rgb(196, 215, 245);
 }
@@ -172,7 +173,8 @@
 .back-to-shop:hover,
 .add-to-bag:hover,
 .secure-checkout:hover,
-.preview-btn:hover {
+.preview-btn:hover,
+#submit-button:hover {
     background-color: rgba(196, 215, 245, 0.8);
 }
 
