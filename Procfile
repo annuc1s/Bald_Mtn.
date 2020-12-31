@@ -1,0 +1,1 @@
+web: gunicorn bald_mtn.wsgi:application
