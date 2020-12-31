@@ -8,7 +8,7 @@ def view_bag(request):
 
 
 def add_to_bag(request, item_id):
-    """ A view that allows user to add products to bag while in session """
+    """ Add a quantity of the specified product to the shopping bag """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -17,19 +17,13 @@ def add_to_bag(request, item_id):
         size = request.POST['product_size']
     bag = request.session.get('bag', {})
 
-    if size:
-        if item_id in list(bag.keys()):
-            if size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][size] += quantity
-            else:
-                bag[item_id]['items_by_size'][size] = quantity
+    if item_id in list(bag.keys()):
+        if size in bag[item_id]['items_by_size'].keys():
+            bag[item_id]['items_by_size'][size] += quantity
         else:
-            bag[item_id] = {'items_by_size': {size: quantity}}
+            bag[item_id]['items_by_size'][size] = quantity
     else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-        else:
-            bag[item_id] = quantity
+        bag[item_id] = {'items_by_size': {size: quantity}}
 
     request.session['bag'] = bag
     return redirect(redirect_url)
